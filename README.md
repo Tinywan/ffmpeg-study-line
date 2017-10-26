@@ -37,6 +37,11 @@
     ```bash
     ffmpeg -i ./test.mkv -vf scale=960:540 960_540.mp4
     ```
++   Mp4格式到flv格式转换
+
+    ```bash
+    ffmpeg -i ./150900298920171025203358.mp4 -y -vcodec copy -acodec copy ./150900298920171025203358.flv
+    ```
         
 ###  :white_check_mark: 视频
 +  FFmpeg concat 协议：  
