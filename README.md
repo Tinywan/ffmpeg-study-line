@@ -47,7 +47,7 @@
     ```bash
     ffmpeg -i 253.mp4 -vcodec copy -acodec copy -ss 2400.00 -to 8049.00  253.tmp.mp4 -y
     ```
-+   MP4格式转换为ts格式
++   MP4格式转换ts格式
 
     ```bash
     ffmpeg -i 253.tmp.mp4 -acodec copy -vcodec copy -bsf:v h264_mp4toannexb  253.tmp.ts
