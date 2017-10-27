@@ -42,7 +42,26 @@
     ```bash
     ffmpeg -i ./150900298920171025203358.mp4 -y -vcodec copy -acodec copy ./150900298920171025203358.flv
     ```
-        
++   根据时间剪切操作,注意这里把小时和分钟全部转换为:`秒`，格式：`8049.00`
+
+    ```bash
+    /usr/bin/ffmpeg -i 20171026190253.mp4 -vcodec copy -acodec copy -ss 2400.00 -to 8049.00  20171026190253.tmp.mp4 -y
+    ```
++   MP4格式转换为ts格式
+
+    ```bash
+    ffmpeg -i 20171026190253.tmp.mp4 -acodec copy -vcodec copy -bsf:v h264_mp4toannexb  20171026190253.tmp.ts
+    ```
++   合并操作 
+
+    ```bash
+    ffmpeg -i "concat:20171026190253.ts|20171026203703.ts|2707220171026221112.ts" -acodec copy -vcodec copy -absf aac_adtstoasc 1509083457.mp4
+    ```
++   自动切片，插入数据库
+
+    ```bash
+    ./mp4-to-hls.sh CY000076862 /home/www/ffmpeg_videos/20171027135057.flv 20171027135057.flv 20171027135057 /home/www/videos
+    ```        
 ###  :white_check_mark: 视频
 +  FFmpeg concat 协议：  
    
