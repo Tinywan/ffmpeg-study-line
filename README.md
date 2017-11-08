@@ -1,26 +1,7 @@
 # FFmpeg音视频的解决方案
-##  代码转换过程 
-
-```bash
- _______              ______________
-|       |            |              |
-| input |  demuxer   | encoded data |   decoder
-| file  | ---------> | packets      | -----+
-|_______|            |______________|      |
-                                          v
-                                      _________
-                                     |         |
-                                     | decoded |
-                                     | frames  |
-                                     |_________|
- ________             ______________       |
-|        |           |              |      |
-| output | <-------- | encoded data | <----+
-| file   |   muxer   | packets      |   encoder
-|________|           |______________|
-
-```
-##  教程
+##  :white_check_mark: 项目笔记
++   [常用DEMO](https://github.com/Tinywan/ffmpeg-study-line/blob/master/doc/Learning-001.md)
+##  :white_check_mark: 教程
 +   [FFmpeg Encoding and Editing Course(FFmpeg编码和编辑课程)](http://slhck.info/ffmpeg-encoding-course/#/)
 +   [FFmpeg VBR Settings](http://slhck.info/video/2017/02/24/vbr-settings.html)
 +   [了解速率控制模式（x264，x265，vpx）](http://slhck.info/video/2017/03/01/rate-control.html)
